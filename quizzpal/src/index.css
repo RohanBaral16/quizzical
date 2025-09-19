@@ -1,0 +1,9 @@
+body{
+  margin: 0px;
+  background-color: #F5F7FB;
+  color: #293264;
+  font-family: "Karla", sans-serif;;
+}
+*{
+  box-sizing: border-box;
+}
