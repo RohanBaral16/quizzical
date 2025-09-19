@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import questionsDefault from '../testQuestions'
 import randomizeAnswers from "../utils/randomizeAnswers"
 import {clsx} from'clsx'
+import Confetti from 'react-confetti'
 
 export default function QuestionPage(){
     //states
@@ -43,7 +44,7 @@ export default function QuestionPage(){
     }else if(gameState === 'incomplete'){
         statusText = `Please answer all questions`
     }else if(gameState === 'over'){
-        statusText =  `You scored ${correctAnswers.length} / ${questions.results.length}`
+        statusText =  `You nailed ${correctAnswers.length} out of ${questions.results.length}-solid progress, just a step away from greatness!🚀`
     }
 
     useEffect(() => {
@@ -58,7 +59,7 @@ export default function QuestionPage(){
     }, [questions]);
 
     useEffect(()=>{
-        fetch('https://opentdb.com/api.php?amount=10&category=18')
+        fetch('https://opentdb.com/api.php?amount=5&category=18')
             .then(res => res.json())
             .then(data => {
                 const decodedData = {
@@ -151,6 +152,11 @@ export default function QuestionPage(){
 
     return(
         <>
+            { gameState === 'over' && <Confetti
+                numberOfPieces={500}
+                recycle={false}
+            />}
+
             <section className="question-page page">
                 <div>{questions? 
                 questionElements
