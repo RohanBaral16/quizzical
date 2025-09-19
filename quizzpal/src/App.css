@@ -79,9 +79,9 @@ button.right{
   background-color: #94D7A2;
 }
 button.wrong{
-  color: #D6DBF5;
+  color: #293264;
   border: none;
-  background-color: #94D7A2;
+  background-color: #ff9b9b;
 }
 button.not-selected{
   color: #D6DBF5;
@@ -120,3 +120,13 @@ button.question-action-btn:active, button.question-action-btn:hover{
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
 }
 
+section.bottom-section{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+section.bottom-section>*{
+  margin: 0px;
+}
