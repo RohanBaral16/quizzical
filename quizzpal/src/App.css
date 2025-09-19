@@ -3,11 +3,9 @@ section.page{
   background-position: left bottom, right top;
   background-repeat: no-repeat, no-repeat;
   background-size: 235px, 235px;
-  width: 100vw;
-  height: 100vh;
-  min-height: 550px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  min-width: 500px;
+  min-height: 100vh;
 }
 section.start-page{
   display: flex;
@@ -48,7 +46,6 @@ section.question-page{
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  overflow-y: auto;
   padding: 40px 40px;
 }
 
