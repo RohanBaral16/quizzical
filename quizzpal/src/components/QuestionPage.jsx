@@ -58,7 +58,7 @@ export default function QuestionPage(){
     }, [questions]);
 
     useEffect(()=>{
-        fetch('https://opentdb.com/api.php?amount=5')
+        fetch('https://opentdb.com/api.php?amount=10&category=18')
             .then(res => res.json())
             .then(data => {
                 const decodedData = {
